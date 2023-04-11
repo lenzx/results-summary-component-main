@@ -20,7 +20,11 @@ function traerDatos () {
                     <p class="sumary-p2" ">/ 100</p>
                 </div>
                 `
-            }   
+            }  
+            
+            res.innerHTML += `
+            <button type="button">Continue</button>
+            `
         }
     }
 }
