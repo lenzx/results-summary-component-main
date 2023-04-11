@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<style>
+
+  body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+  #reaction {
+    color: hsl(0, 100%, 67%);
+  }
+  #memory {
+    color: hsl(39, 100%, 56%);
+  }
+  #verbal {
+    color: hsl(166, 100%, 37%);
+  }
+  #visual {
+    color : hsl(234, 85%, 45%);
+  }
+  .container-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  .container-flex {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    width: 650px;
+    height: 440px;
+    
+  }
+  .container-elementos {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    
+    
+    
+  }
+  .elemento {
+    display: flex;
+    background-color: hsl(221, 100%, 96%);
+    border-radius: 16px;
+    align-items: center;
+    width: 100%;
+    
+    margin: 8px 0;
+    
+  }
+  .sumary {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+  }
+  .result {
+    display: grid;
+    width: 50%;
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-radius: 20px;
+    text-align: center;
+    place-items: center;
+    
+    
+  }
+  .sumary-p {
+    width: 20%;
+    text-align: end ;
+    color: hsl(224, 30%, 27%);
+    font-weight: 800;
+    margin-right: 10px;
+  }
+  .sumary-menu {
+    width: 90%;
+    font-size: 20px;
+    text-align: start;
+    margin: 40px 0 0 10%;
+    font-weight: 900;
+    
+    
+    
+  }
+  .sumary-p2 {
+    width: 25%;
+    color:hsla(224, 30%, 27%, 0.7);
+    text-align: start;
+  }
+  .image {
+    width: 15%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    
+  }
+  img {
+    height: 100%;
+    
+  }
+  .title-sumary {
+    width: 40%;
+    font-size: 14px;
+    
+  }
+  button {
+    padding: 16px;
+    border: none;
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+    height: 48px;
+    margin: 28px 0;
+  }
+  .circle {
+    border-radius: 50%;
+    background: white;
+    height: 160px;
+    width: 160px;
+    background-color: hsla(256, 72%, 46%, 1);
+    
+  }
+  .sumary-number{
+    font-size: 50px;
+    font-weight: 900;
+    margin: 20% 0 0 0;
+    color: rgba(255, 255, 255);
+  }
+  .sumary-subnumber {
+    font-size: 20px;
+    margin-bottom: 100px;
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .result-title {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0 0 0 ;
+  }
+  .result-p1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(255, 255, 255);
+  }
+  .result-p2 {
+    font-size:  14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255,0.7);
+  }
+  .result-text {
+    width: 70%;
+  }
+  @media(max-width : 375px) {
+    .container-flex {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+      min-width: 320px;
+      min-height: 720px;
+      height: 100vh;
+      margin: 0;
+      
+    }
+    .container-elementos {
+      height: 90%;
+    }
+  
+    .container-grid{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .result {
+      width: 100% ;
+      height: 40%;
+      border-bottom-left-radius: 50px ;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      
+    }
+    .result-title {
+      margin: 20px 0 ;
+
+    }
+    .result-text {
+      width: 50%;
+    }
+    .result-p2 {
+      margin: 8px 0 30px;
+    }
+    .result-p1 {
+      margin: 16px 0 0;
+    }
+    .sumary {
+      width: 100% ;
+      height: 60%;
+    }
+    .sumary-menu {
+      height: 10%;
+      
+    }
+    .circle {
+      width: 120px;
+      height: 120px;
+    }
+    .result-text {
+      width: 70%;
+    }
+
+  }
+  
+</style>
+<body>
+  <div class="container-grid">
+    <div class="container-flex">
+      <section class="result">
+        <p class="result-title">Your result</p>
+        <div class="circle">
+          <p class="sumary-number">76</p>
+          <p class="sumary-subnumber">of 100</p>
+        </div>
+        <div class="result-text">
+          <p class="result-p1">Great</p>
+          <p class="result-p2">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </section>
+      <section class="sumary">
+        <p class="sumary-menu">Summary</p>
+        <div class="container-elementos">
+          <div class="elemento">
+            <div class="image"><img src="./assets/images/icon-reaction.svg" alt="reaction"></div>
+            <p class="title-sumary" id="reaction">Reaction</p>
+            <p class="sumary-p" id = 'sumary-reaction'>80</p>
+            <p class="sumary-p2" id="sumary-reaction2">/ 100</p>
+          </div>
+          <div class="elemento">
+            <div class="image"><img src="./assets/images/icon-memory.svg" alt="reaction"></div>
+            <p class="title-sumary" id="memory">Memory</p>
+            <p class="sumary-p" id = 'sumary-memory'>80</p>
+            <p class="sumary-p2"id = 'sumary-memory2'>/ 100</p>
+          </div>
+          <div class="elemento">
+            <div class="image"><img src="./assets/images/icon-verbal.svg" alt="reaction"></div>
+            <p class="title-sumary" id="verbal">Verbal</p>
+            <p class="sumary-p" id = 'sumary-verbal'>80</p>
+            <p class="sumary-p2" id = 'sumary-verbal2'>/ 100</p>
+          </div>
+          <div class="elemento">
+            <div class="image"><img src="./assets/images/icon-visual.svg" alt="reaction"></div>
+            <p class="title-sumary" id="visual">Visual</p>
+            <p class="sumary-p" id = 'sumary-visual'>80</p>
+            <p class="sumary-p2" id="sumary-visual2">/ 100</p>
+          </div>
+          <button type="button">Continue</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+<script src="java.js"></script>
+</html>
